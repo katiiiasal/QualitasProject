@@ -31,6 +31,10 @@ public class VistaMenu extends javax.swing.JFrame {
         lblClientes = new javax.swing.JLabel();
         lblPedidos = new javax.swing.JLabel();
         lblProductos = new javax.swing.JLabel();
+        btnPedidos = new javax.swing.JButton();
+        btnProductos = new javax.swing.JButton();
+        btnEmpleados = new javax.swing.JButton();
+        btnClientes = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,6 +49,28 @@ public class VistaMenu extends javax.swing.JFrame {
 
         lblProductos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Frontend/Productos.png"))); // NOI18N
 
+        btnPedidos.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 12)); // NOI18N
+        btnPedidos.setText("PEDIDOS");
+
+        btnProductos.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 12)); // NOI18N
+        btnProductos.setText("PRODUCTOS");
+        btnProductos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProductosActionPerformed(evt);
+            }
+        });
+
+        btnEmpleados.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 12)); // NOI18N
+        btnEmpleados.setText("EMPLEADOS");
+
+        btnClientes.setFont(new java.awt.Font("Yu Gothic UI Semilight", 1, 12)); // NOI18N
+        btnClientes.setText("CLIENTES");
+        btnClientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClientesActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -54,13 +80,25 @@ public class VistaMenu extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblEmpleados)
                     .addComponent(lblPedidos))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 139, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 235, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblClientes)
                     .addComponent(lblProductos))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(137, 137, 137)
+                .addComponent(btnPedidos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnProductos)
+                .addGap(107, 107, 107))
             .addGroup(layout.createSequentialGroup()
-                .addGap(307, 307, 307)
+                .addGap(125, 125, 125)
+                .addComponent(btnEmpleados)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnClientes)
+                .addGap(105, 105, 105))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(349, 349, 349)
                 .addComponent(lblMenu)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -76,13 +114,29 @@ public class VistaMenu extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblEmpleados)
                             .addComponent(lblClientes))
-                        .addGap(29, 29, 29)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnEmpleados)
+                            .addComponent(btnClientes))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblPedidos)))
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnProductos)
+                    .addComponent(btnPedidos))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnClientesActionPerformed
+
+    private void btnProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnProductosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -120,6 +174,10 @@ public class VistaMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnClientes;
+    private javax.swing.JButton btnEmpleados;
+    private javax.swing.JButton btnPedidos;
+    private javax.swing.JButton btnProductos;
     private javax.swing.JLabel lblClientes;
     private javax.swing.JLabel lblEmpleados;
     private javax.swing.JLabel lblMenu;
